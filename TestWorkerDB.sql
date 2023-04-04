@@ -17,7 +17,7 @@ CREATE TABLE PublicInfo(
     Address VARCHAR(255) NOT NULL,
     WorkerId INT NOT NULL,
     PRIMARY KEY (PersonId),
-    FOREIGN KEY (WorkerId) REFERENCES Worker(WorkerId)
+    FOREIGN KEY (WorkerId) REFERENCES Worker(WorkerId) ON DELETE CASCADE
     );
 
 INSERT INTO Worker (WorkerName, Age, JobTitle, CurrentPay) VALUES
