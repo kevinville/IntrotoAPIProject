@@ -14,6 +14,7 @@ hello
 
 * /api/Worker (GET, POST)
 * /api/Worker/{id} (GET, PUT, DELETE)
+* /api/Public (GET)
 
 ## Example Schema
 
