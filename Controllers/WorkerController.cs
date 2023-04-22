@@ -38,6 +38,7 @@ namespace WorkerSalaryAPI.Controllers
                 response.statusDescription = "No workers?";
             }
 
+            response.statusDescription = "Successfully fetched Workers.";
             return response;
             
         }
@@ -57,6 +58,8 @@ namespace WorkerSalaryAPI.Controllers
                 response.statusDescription = "ID Does not Exist";
                 return NotFound(response);
             }
+            response.Worker = workers;
+            response.statusDescription = "Fetched Worker with said ID";
             return response;
         }
 
@@ -68,7 +71,9 @@ namespace WorkerSalaryAPI.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<Response>> PutWorker(int id, Worker worker)
         {
-            if(id != worker.WorkerId)
+            var response = new Response();
+
+            if (id != worker.WorkerId)
             {
                 return BadRequest();
             }
@@ -91,7 +96,10 @@ namespace WorkerSalaryAPI.Controllers
                 }
             }
 
+            response.statusCode = 200;
+            response.statusDescription = "Successfully updated info.";
             return NoContent();
+            
         }
 
         [HttpPost]

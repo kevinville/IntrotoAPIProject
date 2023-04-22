@@ -21,7 +21,7 @@ namespace WorkerSalaryAPI.Controllers
             _context = context;
         }
 
-        // api/Worker
+        // api/Public
         [HttpGet]
         public async Task<ActionResult<Response>> GetPublicInfo()
         {

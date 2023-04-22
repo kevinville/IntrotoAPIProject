@@ -12,9 +12,9 @@ hello
 
 ## API Endpoints
 
-* /api/Worker (GET, POST)
-* /api/Worker/{id} (GET, PUT, DELETE)
-* /api/Public (GET)
+* https://localhost:7124/api/Worker (GET, POST)
+* https://localhost:7124/api/Worker/{id} (GET, PUT, DELETE)
+* https://localhost:7124/api/Public (GET)
 
 ## Example Schema
 
