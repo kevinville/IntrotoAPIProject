@@ -50,7 +50,7 @@ namespace WorkerSalaryAPI.Controllers
 
             var workers = await _context.Worker.Where(i => i.WorkerId == id).ToListAsync();
             var response = new Response();
-            response.statusCode = 201;
+            response.statusCode = 200;
 
             if(workers.Count == 0)
             {
@@ -131,7 +131,7 @@ namespace WorkerSalaryAPI.Controllers
         public async Task<ActionResult<Response>> DeleteWorker(int id)
         {
             var response = new Response();
-            response.statusCode = 201;
+            response.statusCode = 200;
             var worker = await _context.Worker.FindAsync(id);
 
             if(worker == null)
