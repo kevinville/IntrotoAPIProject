@@ -20,16 +20,16 @@ hello
 
 ```
 {
-  "workerId": 0,
-  "workerName": "string",
-  "age": 0,
-  "jobTitle": "string",
-  "currentPay": 0,
+  "workerId": 8,
+  "workerName": "Squilliam Fancyson",
+  "age": 39,
+  "jobTitle": "Clarinet Player",
+  "currentPay": 999999999,
   "publicInfo": {
-    "personId": 0,
-    "phoneNumber": "string",
-    "address": "string",
-    "workerId": 0
+    "personId": 8,
+    "phoneNumber": "257-981-1398",
+    "address": "Bikini Bottom Stadium",
+    "workerId": 8
   }
 }
 ```
