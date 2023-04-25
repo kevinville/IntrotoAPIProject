@@ -1,7 +1,7 @@
 
 ## Worker Salary API
 
-hello
+I originally only had two endpoints, so I ended up adding the "PublicInfo" GET method to act as the third.
 
 ## API HTTP Methods
 

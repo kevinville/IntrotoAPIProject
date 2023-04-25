@@ -3,7 +3,7 @@ CREATE DATABASE TestJobCensus;
 USE TestJobCensus;
 
 CREATE TABLE Worker(
-	WorkerId INT NOT NULL auto_increment,
+	WorkerId INT auto_increment,
     WorkerName VARCHAR(255) NOT NULL UNIQUE, 
     Age INT NOT NULL,
     JobTitle varchar(255) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE Worker(
     );
     
 CREATE TABLE PublicInfo(
-	PersonId INT NOT NULL auto_increment,
+	PersonId INT auto_increment,
     PhoneNumber VARCHAR(255) NOT NULL,
     Address VARCHAR(255) NOT NULL,
     WorkerId INT NOT NULL,
