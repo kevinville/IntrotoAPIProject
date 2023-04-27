@@ -48,7 +48,7 @@ namespace WorkerSalaryAPI.Controllers
         public async Task<ActionResult<Response>> GetWorker(int id)
         {
 
-            var workers = await _context.Worker.Where(i => i.WorkerId == id).ToListAsync();
+            var workers = await _context.Worker.Include(i => i.PublicInfo).Where(i => i.WorkerId == id).ToListAsync();
             var response = new Response();
             response.statusCode = 200;
 
@@ -99,7 +99,7 @@ namespace WorkerSalaryAPI.Controllers
 
             response.statusCode = 200;
             response.statusDescription = "Successfully updated info.";
-            return NoContent();
+            return response;
             
         }
 
