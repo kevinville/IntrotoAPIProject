@@ -21,7 +21,7 @@ namespace WorkerSalaryAPI.Controllers
             _context = context;
         }
 
-        // api/Worker
+        // GET ALL api/Worker
         [HttpGet]
         public async Task<ActionResult<Response>> GetWorkers()
         {
@@ -43,7 +43,7 @@ namespace WorkerSalaryAPI.Controllers
             
         }
         
-
+        // GET ID api/Worker/id
         [HttpGet("{id}")]
         public async Task<ActionResult<Response>> GetWorker(int id)
         {
@@ -68,6 +68,7 @@ namespace WorkerSalaryAPI.Controllers
             return _context.Worker.Any(i => i.WorkerId == id);
         }
 
+        // PUT api/Worker/id
         [HttpPut("{id}")]
         public async Task<ActionResult<Response>> PutWorker(int id, Worker worker)
         {
@@ -102,6 +103,7 @@ namespace WorkerSalaryAPI.Controllers
             
         }
 
+        // POST api/Worker
         [HttpPost]
         public async Task<ActionResult<Response>> PostWorkers(Worker worker)
         {
@@ -127,6 +129,7 @@ namespace WorkerSalaryAPI.Controllers
             return Ok(response);
         }
 
+        // DELETE api/Worker/id
         [HttpDelete("{id}")]
         public async Task<ActionResult<Response>> DeleteWorker(int id)
         {
